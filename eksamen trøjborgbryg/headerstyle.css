@@ -1,0 +1,235 @@
+/* --- Meyerweb CSS reset --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* --- Reset slut --- */
+
+/* --- Header --- */
+.logo {
+    height: 150px;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+nav {
+    color: black;
+    text-decoration: none;
+}
+
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    margin: 0 5px;  
+}
+
+nav ul li a {
+    line-height: 70px;
+    font-size: 20px;
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    opacity: 0.5;
+
+}
+
+nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    top: 70px;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #604344;
+}
+
+nav ul ul li a {
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.show, .burger, input {
+    display: none;
+}
+
+
+/* Gøre forside header position: fixed på desktop */
+
+.forside-header {
+    width: 100%;
+    position: fixed; 
+    display: flex;
+    flex-direction: column;
+}
+
+.forside-header nav ul {
+    background-color:#9BACCB(202, 167, 167, 0.5);
+    border-radius: 5px;
+}
+
+
+/* --- Udseende på mindre skærme ---  */
+@media all and (max-width: 882px) {
+    /* --- Logo --- */
+    .logo {
+        width: 20%;
+        height: 20%;
+    }
+
+    /* --- Menu --- */
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+
+    nav .logo {
+        padding-left: 4%;
+        padding-top: 1%;
+    }
+
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    nav ul ul {
+        top: 40px;
+        position: static;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul li {
+        box-shadow: none;
+    }
+
+    nav ul ul a {
+        padding-left: 10%;
+    }
+
+    .show {
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 50px;
+    }
+
+    .show:hover {
+        opacity: .5;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        width: 25%;
+        margin-left: 65%;
+        padding-top: 5%;
+    }
+
+    .show + a, ul {
+        display: none;
+    }
+
+    /* For kun at vise menu, når boxen (burgermenuen) er "checked" + ændre bg opacity*/
+    [id^=btn]:checked + ul {
+        display: block;
+        background-color:#9BACCB (255, 255, 255,.5);
+    }
+
+
+    /* Forside header 'normal' igen */
+    .forside-header {
+        position: relative;
+    }
+
+}

@@ -1,0 +1,711 @@
+/* --- Meyerweb CSS reset --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* --- Reset slut --- */
+
+/* --- Header --- */
+.logo {
+    height: 150px;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    
+
+   
+}
+
+p{font-family: 'Roboto', sans-serif;}
+
+nav {
+    color: black;
+    text-decoration: none;
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    margin: 0 5px;  
+}
+
+nav ul li a {
+    line-height: 70px;
+    font-size: 20px;
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    opacity: 0.5;
+}
+
+nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    top: 70px;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #604344;
+}
+
+nav ul ul li a {
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.show, .burger, input {
+    display: none;
+}
+
+/* Gøre forside header position: fixed på desktop */
+
+  
+.forside-header {
+    width: 100%;
+    position: fixed; 
+    display: flex;
+    flex-direction: column;
+    background-color: #9BACCB; /* Farvekode for header baggrundsfarve */
+}
+
+.forside-header nav ul {
+    background-color: #9BACCB; /* Farvekode for navigationsmenuens baggrundsfarve */
+    border-radius: 5px;
+}
+
+/* --- Udseende på mindre skærme ---  */
+@media all and (max-width: 882px) {
+    /* --- Logo --- */
+    .logo {
+        width: 20%;
+        height: 20%;
+    }
+
+    /* --- Menu --- */
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .logo {
+        padding-left: 4%;
+        padding-top: 1%;
+    }
+
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    nav ul ul {
+        top: 40px;
+        position: static;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul li {
+        box-shadow: none;
+    }
+
+    nav ul ul a {
+        padding-left: 10%;
+    }
+
+    .show {
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 50px;
+    }
+
+    .show:hover {
+        opacity: .5;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        width: 25%;
+        margin-left: 65%;
+        padding-top: 5%;
+    }
+
+    .show + a, ul {
+        display: none;
+    }
+
+    /* For kun at vise menu, når boxen (burgermenuen) er "checked" + ændre bg opacity*/
+    [id^=btn]:checked + ul {
+        display: block;
+        background-color: #9BACCB; /* Farvekode for baggrundsfarve */
+    }
+
+    /* Forside header 'normal' igen */
+    .forside-header {
+        position: relative;
+    }
+
+    .forside-header nav ul {
+        background-color: #9BACCB; /* Samme farve som header eller en anden, hvis ønsket */
+        border-radius: 5px;
+    }
+}
+
+body{background-color: #000000;}
+/* Sortiment sidens css ligger i sortiment.html, da den ødelagde alle andre html og fejlen ikke kunne findes */
+
+
+/*Styling af forside*/
+
+.forsidebillede1 img {
+    width: 100%;
+    margin-top: 95px;
+}
+
+#forside-container-1 {
+    background-color: #E5E7D5; 
+  }
+
+  .forside-container {
+    background-color: #E5E7D5; 
+    padding: 20px; /* Tilføj polstring for synlighed */
+  }
+
+.forside-btn {
+    background: #604344;
+    color: #FFF;
+    padding: 10px;
+    margin: 3em auto;
+    margin-block: 3em 3em;
+    width: 160px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .forside-btn button {
+    font-family: 'roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    background: #604344;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 15px;
+  }
+  
+  p {
+    color: #ffffff;
+  }
+  
+  .forside-btn a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  .forside-btn:hover {
+    background: #735657; 
+    opacity: 0.9; 
+    transition: background 0.3s, opacity 0.3s; 
+}
+
+.forside-container h1 {
+    font-size: 28px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: black; /* Set text color to black */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.forside-container p {
+    color: black; /* Set text color to black */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px;
+}
+
+#forside-container-1 {
+    background-color: #604344;
+    color: white;
+}
+#forside-container-1 .forside-btn.special-btn {
+    background: #E5E7D5;
+    color: black 
+}
+#forside-container-1 .forside-btn.special-btn button {
+    background:#E5E7D5 ;
+    color: black 
+    
+}
+#forside-container-1 .forside-btn.special-btn button a{
+    color: #000000;
+}
+
+  
+#ølkitcontainer img {
+    width: 960px;
+    height: 960px;
+    object-fit: cover; /* This ensures the image maintains its aspect ratio */
+    
+}
+
+  #ølkit-tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #ølkitcontainer{
+display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+}
+#ølkit-tekst{
+    grid-column: 1/5;
+    grid-row: auto;
+}
+    
+#bryggekit-img{
+    grid-column: 5/13;
+}
+  #bryggekit-img {
+    width: 960px;
+    height: 960px;
+    object-fit: cover;
+    
+  }
+  
+  #øl-tekst {
+    flex: 1;
+    margin: 0;
+    align-items: center;
+    padding-inline: 150px;
+    padding-block-start: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  
+  #ølkit-tekst h1 {
+    padding-block-start: 3em;
+        font-size: 24px; /* Adjust the size as needed */
+        font-weight: bold;
+        
+    }
+    
+  
+  #ølkit-tekst p {
+    padding-inline: 0;
+    margin-block-start: 2em;
+    padding-block: 2em;
+    line-height: 1.5;
+    padding-inline: 3em;
+  }
+  #ølkit-tekst {
+    background-color: black; /* Ændre baggrundsfarven efter behov */
+    color: rgb(255, 255, 255); /* Ændre teksten farve efter behov */
+    padding: 20px; /* Tilføj eller juster polstring efter behov */
+
+}
+
+#treølcontainer{
+display: grid;
+  grid-template-columns: repeat(12,1fr);
+  
+}
+#treølcontainer img {
+    width: 960px;
+    height: 960px;
+    object-fit: cover; 
+   
+}
+
+  #treøl-tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#treøl-tekst{
+    grid-column: 9/13;
+    grid-row: 12/12;
+}
+    
+#treøl-img{
+    grid-column: 1/9;
+    grid-row: 12/12;
+    
+}
+  
+  
+  #treøl-tekst {
+    flex: 1;
+    margin: 0;
+    align-items: center;
+    padding-inline: 150px;
+    padding-block-start: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  
+  #treøl-tekst h1 {
+    padding-block-start: 3em;
+        font-size: 24px; /* Adjust the size as needed */
+        font-weight: bold;
+        
+    }
+    
+  
+  #treøl-tekst p {
+    padding-inline: 0;
+    margin-block-start: 2em;
+    padding-block: 2em;
+    line-height: 1.5;
+    padding-inline: 3em;
+  }
+  #treøl-tekst {
+    background-color: black; 
+    color: rgb(255, 255, 255); 
+    padding: 20px; 
+}
+
+/* Forside slut */
+
+
+
+/* Om os side start */
+
+.omos-headline img {
+    width: 100%;
+  max-height:  600px;
+}
+
+.personale-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: black; 
+    color: rgb(255, 255, 255);
+    
+}
+
+.personale-container img {
+    width: 50%;
+}
+
+.personale-tekst {
+    padding: 4em;
+    padding-top: 30px;
+}
+
+.omos-tekst-1 {
+    padding: 4em;
+    padding-top: 30px;
+}
+
+.omos-1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.omos-1-container img {
+    width: 50%;
+    
+}
+
+.omos-1-container p {
+    padding-bottom: 0;
+    color: white; /* Ændre tekstfarven til hvid */
+}
+.omos-tekst-1 h1 {
+    display: flex;
+    align-items: center; 
+    color: white; /* Ændre tekstfarven til hvid */
+    font-weight: bold; 
+    font-size: 23px;
+}
+
+.personale-container p {
+    padding-bottom: 0;
+    color: white; /* Ændre tekstfarven til hvid */
+}
+.personale-tekst h2 {
+    display: flex;
+    align-items: center; 
+    color: white; /* Ændre tekstfarven til hvid */
+    font-weight: bold; 
+    font-size: 23px;
+}
+/* Om os side slut */
+
+/* Kontakt start */
+.kontakt-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block-start: 15em;
+    padding-block-end: 20em;
+    text-align: center;
+    color: white; /* Tilføj denne linje for at gøre teksten hvid */
+}
+
+.kontakt-container h1 {
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 0.5em; 
+    color: #E5E7D5
+}
+
+.kontakt-container p {
+    padding-inline: 0;
+    margin-block-start: 2em;
+    color: white; 
+}
+
+/* Kontakt slut */
+
+/* Brygningssæt start */
+
+main {
+    margin-top: 0px; /* Juster denne værdi efter behov for at flytte main containeren længere ned */
+}
+
+#brygge-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 4em 4em 0;
+    background-color: #ffffff; /* Hvid baggrundsfarve */
+    border-radius: 10px; 
+    max-width: 1000px; 
+    max-height: 650px;
+    margin: 0 auto; /* Center containeren horisontalt */
+    
+    
+}
+
+.brygge-h2 {
+    order: 1;
+    color: #000000; 
+    
+}
+
+#brygge-container img {
+    width: 100%;
+    border-radius: 10px; /* Tilføj runde hjørner til billedet */
+}
+
+@media only screen and (min-width: 1000px) {
+    #brygge-container {
+        display: flex;
+        flex-direction: row;
+        background-color: #ffffff; /* Hvid baggrundsfarve */
+    }
+
+    #brygge-container img {
+        width: 50%;
+    }
+
+    .brygge-h2 {
+        
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-inline-start: 4em;
+        color: #000000; /* Sort tekstfarve for h2 */
+    }
+    #brygge-container p {
+        color: #000000;
+    }
+    #brygge-container h2 {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .additional-info {
+        color: #808080; /* Grålig tekstfarve */
+        font-size: 14px;
+        margin-top: 10px;
+        list-style-type: disc; /* Brug punkttegn som listeikon */
+        padding-left: 20px; /* Juster afstanden mellem punkttegn og teksten */
+    }
+.additional-infooverskrift {
+    color: #808080; /* Grålig tekstfarve */
+        font-size: 14px;
+        margin-top: 10px;
+        padding-left: 20px; /* Juster afstanden mellem punkttegn og teksten */
+}
+    .product-price {
+        color: #604344 !important; 
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+
+    }
+}
+
+/* Brygningssæt slut */
+
+/* Styling af footer */
+
+footer {
+    background-color: #604344;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#nestedfooter {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.social a {
+    font-size: 24px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 60%;
+    margin: 0 8px;
+    opacity: 1;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.social a:hover {
+    color: #000000;
+}
+
+.footer ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+.footer ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 1;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #000000;
+}
+
+/* Media Queries */
+@media all and (min-width: 600px) {
+    #nestedfooter {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 882px) {
+    .social a {
+        font-size: 18px;
+    }
+
+    #lokation iframe {
+        width: 100%;
+    }
+
+    #nestedfooter {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #nestedfooter {
+        grid-template-columns: 1fr;
+    }
+}

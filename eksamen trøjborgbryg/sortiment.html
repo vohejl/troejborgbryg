@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrøjborgBryg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style> 
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.sortiment-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section {
+    box-sizing: border-box;
+    width: 30%; 
+    margin: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+section:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+.container2 {
+    
+    background-color: #E5E7D5;
+    border: 2px solid #ffffff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+}
+
+#product {
+    float: left;
+    width: 50%;
+}
+
+#product img {
+    width: 100%;
+    height: auto;
+}
+.product-info {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 24px;
+    color: #000000;
+}
+.product-description {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #604344; 
+}
+
+#product-description {
+    float: right;
+    width: 50%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 48%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+p {
+    font-size: 1em;
+    color: #000000;
+    line-height: 1.4;
+}
+</style>
+</head>
+<body>
+
+    <!-- Header, navigationsmenu + logo -->
+    <header class="forside-header"> 
+        <nav>
+            <div><a href="index.html"><img src="img/logosort.png" alt="logo"  class="logo"></a></div>
+            <label for="btn" class="burger"> 
+                <img src="img/burgermenu.png" alt="burgermenu" class="burger">
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li>
+                    <a href="sortiment.html">Sortiment</a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li><a href="sortiment.html">Øl sortiment</a></li>
+                        <li><a href="Brygningssaet.html">Brygningssæt</a></li>
+                        <li><a href="error.html">Smagskasser</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="error.html">Oplevelser</a>
+                </li>
+                <li>
+                    <a href="brygningsproces.html">Brygningsproces</a>
+                </li>
+
+                <li>
+                <a href="om_os.html">Om os</a>
+                </li>
+                
+            
+                <li> 
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+            </ul>
+            
+        </nav>
+    </header> 
+    <!-- Header slut -->
+
+    <!-- Produkt billeder og beskrivelser -->
+
+    <div class="sortiment-div"> 
+        <section>
+            <img src="img/amberale.png" alt="amberale" >
+            <h4>Amber Ale</h4>
+            <p>Amber Ale byder på  smagsnoter af karamel, nødder og ristede malttoner. En velafbalanceret øl, perfekt til dem, der søger en autentisk ale-oplevelse uden tilsat alkohol</p>
+        </section>
+
+        <section>
+            <img src="img/balancebrew .png" alt="BalanceBrew"> 
+            <h4>BalanceBrew</h4>
+            <p>BalanceBrew er en delikat fusion. Den har en let og forfriskende karakter, hvor hints af citrus og urter blander sig harmonisk. En velafbalanceret smag, der inviterer dig til at nyde livet uden at gå på kompromis </p>
+        </section>
+
+        <section>
+            <img src="img/havbrisbryg.png" alt="havbrisbryg"> 
+            <h4>Havbris Bryg</h4>
+            <p>En forfriskende bølge af havbris indfanges i hver tår af havbrisBryg. Smagen er domineret af lette citrusnoter, brise af havluft og en mild saltet undertone, der transporterer dig til kystens skønhed.</p>
+        </section>
+        <section>
+            <img src="img/honeyharmony.png" alt="HoneyHarmony">
+            <h4>Honey Harmony</h4>
+            <p>Lad dig forføre af den delikate sødme i HoneyHarmony. Denne øl kombinerer noter af gylden honning med en let blomsteragtig karakter, der skaber en harmonisk og lækker smagsoplevelse</p>
+        </section>
+
+        <section>
+            <img src="img/nordisknektar.png" alt="nordisknektar"> 
+            <h4>Nordisk Nektar</h4>
+            <p>plev en kompleks symfoni af nordiske smagsoplevelser i NordiskNektar. De nøje udvalgte ingredienser skaber en balanceret smag med subtile toner af vilde bær, let honningagtig sødme og en undertone af friskhed, der afspejler den nordiske natur.</p>
+        </section>
+
+        <section>
+            <img src="img/sunnysidestout.png" alt="sunnysidestout">
+            <h4>SunnysideStout</h4>
+            <p>SunnysideStout leverer en mørk og fyldig smagsoplevelse med noter af ristet kaffe,  og en frisk eftersmag. Den skaber en varm atmosfære selv på de køligste dage </p>
+        </section>
+
+        <section>
+            <img src="img/tropicaltwistipa.png" alt="tropicaltwistipa"> 
+            <h4>TropicalTwist IPA</h4>
+            <p>Tag en tur til tropiske himmelstrøg med  TropicalTwist IPA. Denne øl kombinerer saftige tropiske frugter som mango med en afbalanceret bitterhed, der giver en forfriskende og eksotisk smagsoplevelse</p>
+        </section>
+
+        <section>
+            <img src="img/zenzest.png" alt="zenzest">
+            <h4>ZenZest</h4>
+            <p>ZenZest leverer en beroligende smagsoplevelse med subtile noter af kamille og citrus. Den glider blidt over ganen med en let krydret eftersmag, der efterlader dig med følelsen af indre ro og tilfredshed</p>
+        </section>
+
+        <section>
+            <img src="img/evergreeneuphoria.png" alt="evergreeneuphoria" >
+            <h4>Evergreen Euphoria</h4>
+            <p>Øllen der indfanger essensen af skovens nåletræer med noter af gran, en antydning af citrus</p>
+        </section>
+
+        <section>
+            <img src="img/cinnamonsensation.png" alt="cinnamonsensation">
+            <h4>CinnamonSensation</h4>
+            <p>CinnamonSensation, en smagsfuld oplevelse. Den kombinerer kraftfulde krydderier med en let sødme og en undertone af nødder, der skaber en øl, der vækker sanserne.</p>
+        </section>
+
+        <section>
+            <img src="img/glamourgløgg.png" alt="glamourgløgg">
+            <h4>GlamourGløgg</h4>
+            <p>Kom i julestemning med GløggGlamour som forener tradition og elegance med smagsnoter af varm krydderi, rødvin og en diskret antydning af vanilje</p>
+        </section>
+
+        <section>
+            <img src="img/frostbitebrew.png" alt="frostbitebrew">
+            <h4>FrostbiteBrew</h4>
+            <p>Lad FrostbiteBrew transportere dig til et vinterlandskab med hver slurk. Denne øl byder på kølige noter af pebermynte, subtil vanilje og en snert af krydret ingefær, der efterlader en forfriskende fornemmelse på ganen.</p>
+        </section>
+
+    </div>
+
+
+     <!-- Footer -->
+<footer class="footer">
+    <div id="nestedfooter">
+      <div>
+        <ul>
+          <h3>&copy;2023 TrøjborgBryg</h3>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Privatslivspolitik</a></li>
+          <li><a href="#">Copyright</a></li>
+        </ul>
+      </div>
+  
+      <div class="social">
+        <h3>Find os på sociale medier!</h3>
+        <br>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+  
+      <div id="lokation">
+        <h3>Find os i Aarhus</h3>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2221.1553492523653!2d10.213720476849755!3d56.17170735964825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3fba66da04d9%3A0x2e992d7d6bc183b9!2sTordenskjoldsgade%2C%208200%20Aarhus!5e0!3m2!1sda!2sdk!4v1702862919188!5m2!1sda!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+   <!-- Footer slut -->
